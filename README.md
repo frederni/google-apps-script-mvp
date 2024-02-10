@@ -45,7 +45,7 @@ This is actually taken from a personal project I had. TL;DR I have a folder of s
 - Fetches all dinners from previous spreadsheets (all in GDrive folder `<FOLDERID>`) in a bronze layer
 - Cleans data, removing duplicates with fuzzy search, trims text, and removes exact matches from an exclude list
 - Has a function to retrieve random recipe from dataset using parameters like dinner type ("Meat", "Fish", "Vegetarian") and season ("Summer", "Winter")
-    - The season parameter will filter dinners that were had  
+    - The season parameter will filter dishes by when they were eaten according to source data
 - OpenAI integration that prompts GPT 3.5 turbo to write dish and instructions
     - Option to save suggestion to other sheet, grabbing the cell URL to easily access
     - Prompt will change on dinner type (meat, fish, vegetarian) and can add customized message
