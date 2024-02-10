@@ -1,5 +1,5 @@
 # Google Apps Script MVP
-*A showcase of 3 use cases for Google Apps Script*
+*A showcase of ~3~ 4 use cases for Google Apps Script*
 
 Many people don't know how powerful Google Apps Script really is. Considering it's free for end-users with a gmail account, it can boost your productivity and automate processes in Google Drive, Sheets, Forms and other Google Workspace services. Below are 3 specific use cases that are easy to reimplement to your own needs.
 
@@ -38,3 +38,15 @@ This usecase demonstrates the capabilities of `DriveApp`. In the example below, 
 - **Change formula** function that takes in a range and formula and applied formula to each selected budget. `setFormula` will auto-increment formula unless `$` is part of range reference
 - Should not have any scheduling
 
+## Usecase 4 - Dinner suggestion and OpenAI integration
+
+This is actually taken from a personal project I had. TL;DR I have a folder of spreadsheets with dinner dishes for each day. The usecase implements a data pipeline that:
+
+- Fetches all dinners from previous spreadsheets (all in GDrive folder `<FOLDERID>`) in a bronze layer
+- Cleans data, removing duplicates with fuzzy search, trims text, and removes exact matches from an exclude list
+- Has a function to retrieve random recipe from dataset using parameters like dinner type ("Meat", "Fish", "Vegetarian") and season ("Summer", "Winter")
+    - The season parameter will filter dinners that were had  
+- OpenAI integration that prompts GPT 3.5 turbo to write dish and instructions
+    - Option to save suggestion to other sheet, grabbing the cell URL to easily access
+    - Prompt will change on dinner type (meat, fish, vegetarian) and can add customized message
+    - Requires API key to work
