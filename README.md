@@ -1,5 +1,5 @@
 # Google Apps Script MVP
-*A showcase of ~3~ 4 use cases for Google Apps Script*
+*A showcase of ~3~ 5 use cases for Google Apps Script*
 
 Many people don't know how powerful Google Apps Script really is. Considering it's free for end-users with a gmail account, it can boost your productivity and automate processes in Google Drive, Sheets, Forms and other Google Workspace services. Below are 3 specific use cases that are easy to reimplement to your own needs.
 
@@ -50,3 +50,12 @@ This is actually taken from a personal project I had. TL;DR I have a folder of s
     - Option to save suggestion to other sheet, grabbing the cell URL to easily access
     - Prompt will change on dinner type (meat, fish, vegetarian) and can add customized message
     - Requires API key to work
+ 
+## Usecase 5 - Send reimbursement form and attachments to accounting software
+
+This usecase is inspired by the countless of small organizations that require all volunteers to manually fill out a reimbursement form for expenses they may have. Instead, they can fill out a Google Form and upload receipts in the same form, that automatically exports all required documents to the accounting software.Particularly, the content of the form is filled in a voucher using a template, this voucher is exported as a PDF and sent alongside the uplaoded receipts to an e-mail for our accounting systems. The use case is based on a sample provided by Google themselves, [Generate & send PDFs from Google Sheets](https://developers.google.com/apps-script/samples/automations/generate-pdfs). Features:
+
+- Export a Google Sheets sheet to PDF
+- Send email with attachments of arbitrary file type (as long as it's a recognized MIME type)
+- Code is easily customizable and adaptable for more Google Form data or modified template
+- Triggers immediately when a form is submitted
