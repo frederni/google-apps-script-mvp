@@ -1,5 +1,5 @@
 # Google Apps Script MVP
-*A showcase of ~3~ 5 use cases for Google Apps Script*
+*A showcase of ~3~ 6 use cases for Google Apps Script*
 
 Many people don't know how powerful Google Apps Script really is. Considering it's free for end-users with a gmail account, it can boost your productivity and automate processes in Google Drive, Sheets, Forms and other Google Workspace services. Below are 3 specific use cases that are easy to reimplement to your own needs.
 
@@ -59,3 +59,12 @@ This usecase is inspired by the countless of small organizations that require al
 - Send email with attachments of arbitrary file type (as long as it's a recognized MIME type)
 - Code is easily customizable and adaptable for more Google Form data or modified template
 - Triggers immediately when a form is submitted
+
+## Usecase 6 - Update working location in Google Calendar based on spreadhseet
+
+This is also inspired by a real-world need, as I had a spreadsheet with an overview over which dates I was supposed to work from home, and which dates to work from the office.
+The spreadsheet in the usecase concept has a column with each date, and a column with names. When the value in *names* is exactly the const `WFH_NAME`, then the user is supposed to work from home.
+
+Note this is a modified version of Google's own guide which is available [here](https://developers.google.com/calendar/api/guides/calendar-status#appsscript-code).
+
+Also note that you probably have to have a Google Workspace account to be able to use office location. You also have to configure the Google Calendar API within your Apps Script window under "Services" and add "Google Calendar API".
